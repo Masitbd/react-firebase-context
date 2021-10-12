@@ -5,7 +5,10 @@ import initializationAuthentication from "./Firebase/firebase.initialize";
 import Home from "./Firebase/Home/Home";
 import Header from "./Header/Header";
 import Login from "./Login/Login";
+import PlaceOrder from "./PlaceOrder/PlaceOrder";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Register from "./Register/Register";
+import Shiping from "./Shiping/Shiping";
 
 initializationAuthentication();
 
@@ -29,6 +32,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+            <PrivateRoute path="/shiping">
+              <Shiping></Shiping>
+            </PrivateRoute>
+            <PrivateRoute path="/placeOrder">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
